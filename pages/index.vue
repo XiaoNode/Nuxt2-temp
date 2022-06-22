@@ -20,8 +20,7 @@ export default {
     };
   },
   mounted() {
-    console.log(123);
-    this.getRecom();
+    // this.getRecom();
   },
   methods: {
     getRecom() {

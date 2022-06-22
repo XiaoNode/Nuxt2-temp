@@ -7,7 +7,6 @@ export default ({ app: { $axios } }, inject) => {
   $axios.defaults.baseURL = baseUrl; // "http://localhost:7788";
 
   inject("axiosApi", (url, method, params) => {
-    console.log(params);
     return new Promise((resolve, reject) => {
       $axios({
         method: method || "POST",
