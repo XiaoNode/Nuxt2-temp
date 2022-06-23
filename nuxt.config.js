@@ -51,24 +51,24 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
-    [
-      '@nuxtjs/i18n',
-      {
-        locales: ['en', 'es'],
-        defaultLocale: 'en',
-        vueI18n: {
-          fallbackLocale: 'en',
-          messages: {
-            en: {
-              greeting: 'Hello world!'
-            },
-            es: {
-              greeting: '¡Hola mundo!'
-            }
-          }
-        }
-      }
-    ]
+    // [
+    //   '@nuxtjs/i18n',
+    //   {
+    //     locales: ['en', 'es'],
+    //     defaultLocale: 'en',
+    //     vueI18n: {
+    //       fallbackLocale: 'en',
+    //       messages: {
+    //         en: {
+    //           greeting: 'Hello world!'
+    //         },
+    //         es: {
+    //           greeting: '¡Hola mundo!'
+    //         }
+    //       }
+    //     }
+    //   }
+    // ]
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

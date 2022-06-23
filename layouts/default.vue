@@ -29,6 +29,12 @@ export default {
           entry: "http://localhost:7001/",
           container: "#subapp",
         },
+        {
+          name: "vue3-app",
+          activeRule: "/user",
+          entry: "http://localhost:7002/",
+          container: "#subapp",
+        },
       ]);
 
       // 启动
