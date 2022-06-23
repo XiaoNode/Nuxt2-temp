@@ -38,6 +38,7 @@ export default {
     "@/plugins/axios",
     { src: "@/plugins/loading", ssr: false },
     { src: "@/plugins/vuex-persister.js", ssr: false },
+    // { src: '@/plugins/resolveapps', ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

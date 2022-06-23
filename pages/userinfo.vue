@@ -10,6 +10,7 @@ import { mapState } from "vuex";
 import Cookies from "js-cookie";
 export default {
   middleware: "auth",
+  layout:"mount",
   computed: {
     ...mapState({
       auth: (state) => state.auth,

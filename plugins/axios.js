@@ -15,7 +15,6 @@ export default ({ app: { $axios } }, inject) => {
         data: params,
       })
         .then((res) => {
-          console.log(res);
           resolve(res.data);
         })
         .catch((err) => {

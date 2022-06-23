@@ -36,10 +36,13 @@ export default {
   methods: {
     login() {
       this.$store.commit("setUserData", this.$data.user);
-      this.$store.commit("setIsLogined", {isLogined:true});
+      this.$store.commit("setIsLogined", { isLogined: true });
 
-      this.$router.push({ name: "userinfo" });
-    }
+      // 无 i18n模式
+      // this.$router.push({ name: "userinfo" });
+
+      this.$router.push("/userinfo");
+    },
   },
 };
 </script>
