@@ -41,6 +41,10 @@ export default {
     // { src: '@/plugins/resolveapps', ssr: false }
   ],
 
+  router: {
+    middleware: "unknownRoute",
+  },
+
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
