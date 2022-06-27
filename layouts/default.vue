@@ -23,12 +23,12 @@ export default {
       const qiankun = await import("qiankun");
       // 注册所有子应用
       qiankun.registerMicroApps([
-        {
-          name: "vue-app",
-          activeRule: "/vue",
-          entry: "http://localhost:7001/",
-          container: "#subapp",
-        },
+        // {
+        //   name: "vue-app",
+        //   activeRule: "/vue",
+        //   entry: "http://localhost:7001/",
+        //   container: "#subapp",
+        // },
         {
           name: "vue3-app",
           activeRule: "/user",

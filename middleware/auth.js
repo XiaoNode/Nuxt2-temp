@@ -11,8 +11,8 @@ export default function (app) {
   console.log(app)
   if (!isAuthenticated) {
     // 无 i18n模式
-    // app.redirect({ name: "auth" });
+    app.redirect({ name: "auth" });
 
-    app.redirect(app.localePath("auth"));
+    // app.redirect(app.localePath("auth"));
   }
 }
