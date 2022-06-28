@@ -1,6 +1,10 @@
 <template>
   <div>
     <header-temp />
+    <div>
+      <input type="text" v-model="value" />
+      <button @click="handleChange">change global value</button>
+    </div>
     <nuxt />
     <div id="subapp"></div>
     <footer-temp />
@@ -8,6 +12,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
   data() {
     return {
@@ -17,9 +22,14 @@ export default {
   async mounted() {
     this.init();
   },
-  computed: {},
+  computed: {
+    ...mapState(["sdk"]),
+  },
   methods: {
     async init() {
+      // this.$store.commit("setSDK", []);
+       this.$store.dispatch('setSDK')
+
       const qiankun = await import("qiankun");
       // 注册所有子应用
       qiankun.registerMicroApps([
@@ -39,6 +49,11 @@ export default {
 
       // 启动
       qiankun.start();
+    },
+    handleChange() {
+      this.sdk.globalState.setGlobalState({
+        name: this.value,
+      });
     },
   },
 };

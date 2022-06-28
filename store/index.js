@@ -2,10 +2,6 @@ import Vue from "vue";
 import Vuex from "vuex";
 Vue.use(Vuex);
 
-// const TYPES = {
-//   INIT_APPS: 'init_apps'
-// }
-
 const store = () =>
   new Vuex.Store({
     state: {
@@ -14,6 +10,7 @@ const store = () =>
       auth: { username: null, password: null },
       token: "sdfs",
       apps: [],
+      sdk: null,
     },
     mutations: {
       setUserData(state, data) {
@@ -24,39 +21,24 @@ const store = () =>
       setIsLogined(state, data) {
         state.isLogined = data.isLogined;
       },
+
       init_apps(state, payload) {
-        state.apps = payload;
+        state.sdk = payload;
       },
     },
 
     actions: {
-      async getMenus({ commit }) {
+      async setSDK({ commit,state }) {
+        const qiankun = await import("qiankun");
+        const actions = qiankun.initGlobalState();
 
-        commit("init_apps", [
-          {
-            name: "vue-app",
-            activeRule: "/vue",
-            entry: "http://localhost:7001/",
-            container: "#subapp",
-          },
-        ]);
-
+        const sdk = {
+          globalState: actions,
+          name: state.app,
+        };
+        commit("init_apps", sdk);
       },
     },
   });
 
 export default store;
-
-// async function getMenus() {
-//   return {
-//     code: 0,
-//     payload: [
-//       {
-//         name: "vue-app",
-//         entry: "http://localhost:7001/",
-//         container: "#subapp",
-//       },
-//     ],
-//     message: "success",
-//   };
-// }
