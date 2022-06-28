@@ -1,10 +1,10 @@
 <template>
   <div>
     <header-temp />
-    <div>
+    <!-- <div>
       <input type="text" v-model="value" />
       <button @click="handleChange">change global value</button>
-    </div>
+    </div> -->
     <nuxt />
     <div id="subapp"></div>
     <footer-temp />
