@@ -5,7 +5,7 @@ export default {
   head: {
     title: "nuxt2-temp",
     htmlAttrs: {
-      lang: "en",
+      lang: "zh-CN",
     },
     meta: [
       { charset: "utf-8" },
@@ -42,6 +42,10 @@ export default {
     "@/plugins/axios",
     { src: "@/plugins/loading", ssr: false },
     { src: "@/plugins/vuex-persister.js", ssr: false },
+    {
+      src: "@/plugins/vue-lazyload",
+      ssr: false,
+    },
     // { src: '@/plugins/resolveapps', ssr: false }
   ],
 

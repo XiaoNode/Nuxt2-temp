@@ -81,8 +81,8 @@ a {
   color: #333;
   text-decoration: none;
   transition: color 0.2s ease-out;
-  font-weight: normal;
-  font-size: 14px;
+  // font-weight: normal;
+  // font-size: 14px;
 }
 
 a:hover {
@@ -448,10 +448,6 @@ input {
   float: right;
 }
 
-.ksy-handler-danger {
-  color: $errorColor;
-}
-
 .ksy-handler-red {
   color: $errorColor;
 }
@@ -462,10 +458,6 @@ input {
 
 .ksy-ib {
   display: inline-block;
-}
-
-.ksy-cp {
-  cursor: pointer;
 }
 
 .ksy-w300 {
@@ -494,13 +486,6 @@ input {
 
 .ksy-fs12 {
   font-size: 12px;
-}
-
-.custom-affix {
-  .ant-affix {
-    z-index: 9 !important;
-    background: #fff;
-  }
 }
 
 .ksy-text-oh {
@@ -532,23 +517,6 @@ input {
   text-align: left;
 }
 
-// “没有数据”没有滚动条，只是表格滚动
-.ant-table-body {
-  overflow: auto;
-}
-
-.ant-table-placeholder {
-  border-bottom: none !important;
-}
-
-.ksy-inline-form {
-  .ant-form-item {
-    display: block;
-    margin-bottom: 10px;
-    margin-right: 0;
-  }
-}
-
 .ksy-select-text {
   margin-left: 10px;
 
@@ -557,7 +525,7 @@ input {
   }
 }
 
-// 全站色彩管理，UI配套色在vue.config.js css处修改
+// 全站色彩管理
 .ksy-status-primary {
   color: $primaryColor !important; // 主题色
 }
