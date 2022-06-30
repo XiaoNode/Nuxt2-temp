@@ -2,9 +2,7 @@
   <div>
     this is index page
 
-    <!-- {{ newList }} -->
-    <hr />
-    <NewsList />
+    <!-- <NewsList /> -->
   </div>
 </template>
 

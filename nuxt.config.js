@@ -31,7 +31,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    "element-ui/lib/theme-chalk/index.css",
+    "@/assets/css/element-variables.scss",
     "normalize.css/normalize.css",
     "@/assets/css/var.scss",
   ],
@@ -46,7 +46,6 @@ export default {
       src: "@/plugins/vue-lazyload",
       ssr: false,
     },
-    // { src: '@/plugins/resolveapps', ssr: false }
   ],
 
   router: {

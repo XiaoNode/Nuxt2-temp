@@ -27,8 +27,7 @@ export default {
   },
   methods: {
     async init() {
-      // this.$store.commit("setSDK", []);
-       this.$store.dispatch('setSDK')
+      this.$store.dispatch("setSDK");
 
       const qiankun = await import("qiankun");
       // 注册所有子应用
